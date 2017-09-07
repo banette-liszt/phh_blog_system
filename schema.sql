@@ -44,9 +44,9 @@ CREATE TABLE `entry` (
        `updated_at` timestamp not null default current_timestamp on update current_timestamp -- 記事の更新日
 );
 -- テストデータを挿入する
-INSERT INTO `entry` (`user_id`, `title`, `tag_id`, `text`) VALUES (1, "最初の記事", 1, "ドキドキするー");
-INSERT INTO `entry` (`user_id`, `title`, `tag_id`, `text`) VALUES (1, "二番目の記事", 1, "ワクワクするー");
-COMMIT;
+-- INSERT INTO `entry` (`user_id`, `title`, `tag_id`, `text`) VALUES (1, "最初の記事", 1, "ドキドキするー");
+-- INSERT INTO `entry` (`user_id`, `title`, `tag_id`, `text`) VALUES (1, "二番目の記事", 1, "ワクワクするー");
+-- COMMIT;
 
 -- タグテーブルの削除と作成をする
 DROP TABLE IF EXISTS `tag`;

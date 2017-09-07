@@ -35,6 +35,7 @@ const server = http.createServer ((req, res) => {
     case '/entry/post/add':
       postNewEntry (req, res);
       break;
+      case 'entry/delete':
     default:
       res.end ();
       break;
@@ -143,6 +144,35 @@ function showPostPage (req, res) {
 
 // 新規投稿をする
 function postNewEntry (req, res) {
+  req.on('data', (data) => {
+    // 入力内容を取得し、、
+    const decoded = decodeURIComponent(data);
+    const querystring = require('querystring');
+    let parsedResult = querystring.parse(decoded);
+    let connection;
+
+    mysql.createConnection ({
+      host: 'localhost',
+      user: 'root',         // 'root'
+      password: '',   // ''
+      database: DB_NAME,
+    }).then ((conn) => {
+      connection = conn;
+      connection.query ('INSERT INTO `entry` (`user_id`,`title`,`tag_id`,`text`) VALUES(?,?,?,?)',
+                        [
+                          1,
+                          parsedResult['title'],
+                          parsedResult['tag'],
+                          parsedResult['entry'],
+                        ]);
+    }).then ((result) => {
+      connection.end ();
+
   // トップページに戻る
   showTopPage (req, res);
+
+}).catch ((error) => {
+      console.log (error);
+    });
+  });
 }

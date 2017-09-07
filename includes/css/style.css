@@ -1,3 +1,54 @@
-.phh-header-background {
-    background-color: #00A6CC;
+h1{
+    text-align: center;
+    font-family: 'Splatfont',sans-serif;
+    /* font-family: 'Project Paintball',sans-serif; スプラ１のフォント */
+    color:#FF4CB6
 }
+
+header{
+    /* background-image:url(http://livedoor.4.blogimg.jp/lllawright/imgs/9/4/941f6814.gif); */
+    background-image:url(https://www.nintendo.co.jp/switch/aab6a/assets/images/top_sec01_bg.jpg);
+    
+}
+
+h2{
+    font-family: 'Splatfont',sans-serif;
+    color:#FF418A
+}
+
+.phh-header-background {
+    background: -webkit-linear-gradient(top, #7F6DFF 39%, #00FFCE 52%, #7F6DFF 86%);
+}
+
+
+body{
+    background-image:url(https://www.nintendo.co.jp/switch/aab6a/assets/images/top_sec01_bg.jpg);
+    font-family: 'Splatfont',sans-serif;
+    font-size: 20pt;
+}
+
+div{
+    font-family: 'Splatfont',sans-serif;
+    color:#38FF86
+}
+
+/* Channard NFI */
+
+a{
+    font-family: 'Splatfont',sans-serif;
+    color:#864BFE
+}
+
+li{
+    color:#FF3CA0 
+}
+
+/* 
+body
+li
+a
+header
+body
+div
+h2{cursor:url(https://scontent-nrt1-1.xx.fbcdn.net/v/t1.0-9/21232054_354547504967571_1343121279432235876_n.jpg?oh=c693e7ada04fa23c19d22f91f33df01e&oe=5A5423F7),auto}
+ */
